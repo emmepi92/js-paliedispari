@@ -47,7 +47,7 @@ function isPalindrome(name) {
 
 var userWord = prompt("Inserisci una parola");
 
-var risultato = odiosa(userWord);
+var risultato = odiosa(userWord); // cambia con isPalindrome
 
 if (risultato) {
     result ='nome palindromo';
@@ -76,7 +76,7 @@ function isSumPari (num1, num2) {
     return pari  
 }
 
-var userBet = prompt("Scegli fra pari o dispare, scrivendo 'pari' o 'dispari");
+var userBet = prompt("Scegli fra pari o dispari, scrivendo 'pari' o 'dispari'");
 var userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
 result2 = '';
 
