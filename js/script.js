@@ -1,13 +1,12 @@
 var outputHtml = document.getElementById("result");
 function odiosa(word) {
-    //funzione odiosa che decide di stabilire se una parola o numero è palindromo
+    //funzione odiosa che stabilisce se una parola o numero è palindromo
     //decido di esaminare la parola a coppie, primo carattere con l'ultimo,
-    //secondo con secondultimo, e cosi via
+    //secondo con penultimo, e cosi via
 
     var result = '';   
 
-    //imposto il flag a true, che diventa false solo se i due caratteri della coppia
-    // sono diversi 
+    //imposto il flag a true, che diventa false se la coppia di caratteri non sono uguali
     var flag = true;
     
     //creo una variabile per l'indice da decrementare per il secondo elemento della coppia
