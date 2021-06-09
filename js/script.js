@@ -83,7 +83,7 @@ while (userBet !== 'pari' && userBet!=='dispari'){
 }
 
 var userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
-while (isNaN(userNum) || userNum === 0 || userNum >=5) {
+while (isNaN(userNum) || userNum === 0 || userNum >5) {
     alert("Inserisci un numero fra 1 e 5");
     userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
 }
