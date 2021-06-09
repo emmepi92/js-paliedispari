@@ -55,7 +55,7 @@ if (risultato) {
     result ='nome non palindromo';
 }
 
-outputHtml.innerHTML = result;
+outputHtml.innerHTML = 'Il nome inserito è '+ userWord + '<br/>' + result + '<br/> <br/> <br/>';
 
 
 
