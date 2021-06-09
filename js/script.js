@@ -1,5 +1,5 @@
 var outputHtml = document.getElementById("result");
-function odiosa(word) {
+function odiosa(word) { //come complicarsi la vita inutilmente
     //funzione odiosa che stabilisce se una parola o numero è palindromo
     //decido di esaminare la parola a coppie, primo carattere con l'ultimo,
     //secondo con penultimo, e cosi via
@@ -32,13 +32,26 @@ function odiosa(word) {
     return result;
 }
 
+// con aiuto di Davide
+function isPalindrome(name) {
+    var result = '';
+    for (x = name.length-1; x >= 0; x--) {
+        result += name[x];
+    }
+
+    if (name === result) {
+        result ='nome palindromo';
+    } else {
+        result='nome non palindromo'
+    }
+    return result;
+}
+
 var userWord = prompt("Inserisci una parola");
 
-var risultato = odiosa(userWord);
+var risultato = isPalindrome(userWord);
 
 outputHtml.innerHTML = risultato;
-
-
 
 
 
