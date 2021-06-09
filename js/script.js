@@ -77,7 +77,16 @@ function isSumPari (num1, num2) {
 }
 
 var userBet = prompt("Scegli fra pari o dispari, scrivendo 'pari' o 'dispari'");
+while (userBet !== 'pari' && userBet!=='dispari'){
+    alert('Scegli fra pari o dispari');
+    userBet = prompt("Scegli fra pari o dispari, scrivendo 'pari' o 'dispari'");
+}
+
 var userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
+while (isNaN(userNum) || userNum === 0 || userNum >=5) {
+    alert("Inserisci un numero fra 1 e 5");
+    userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
+}
 result2 = '';
 
 var pcNum = getRandonFrom1to5();
