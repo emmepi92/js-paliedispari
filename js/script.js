@@ -1,15 +1,27 @@
 var outputHtml = document.getElementById("result");
-function odiosa (word) {
+function odiosa(word) {
+    //funzione odiosa che decide di stabilire se una parola o numero è palindromo
+    //decido di esaminare la parola a coppie, primo carattere con l'ultimo,
+    //secondo con secondultimo, e cosi via
 
-    var result = '';    
-    var flag = true;      
+    var result = '';   
+
+    //imposto il flag a true, che diventa false solo se i due caratteri della coppia
+    // sono diversi 
+    var flag = true;
+    
+    //creo una variabile per l'indice da decrementare per il secondo elemento della coppia
+    //parto dalla lunghezza della parola e decremento nel for
     var reverseIndex = word.length;     
+
+    //trovo la meta della lunghezza della parola, che corrisponde al numero delle coppie da confrontare
+    //uso math.floor per eliminare il il carattere singolo centrale se la stringa è dispari
     var maxIndex = Math.floor(word.length / 2); 
     
     for ( var i = 0; i < maxIndex; i++) {
         reverseIndex -= 1
-        if (word[i] !== word[reverseIndex]) {
-            flag = false;
+        if (word[i] !== word[reverseIndex]) { 
+            flag = false; //flag=false solo se trova una coppia non uguale
         }
     }
     
@@ -48,7 +60,7 @@ function isSumPari (num1, num2) {
     return pari  
 }
 
-var userPariOrDispari = prompt("Scegli fra pari o dispare, scrivendo 'pari' o 'dispari");
+var userBet = prompt("Scegli fra pari o dispare, scrivendo 'pari' o 'dispari");
 var userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
 result2 = '';
 
@@ -56,7 +68,7 @@ var pcNum = getRandonFrom1to5();
 
 var sum = isSumPari( userNum, pcNum);
 
-if ( (sum === true && userPariOrDispari === 'pari') || (sum === false && userPariOrDispari === 'dispari')) {
+if ( (sum === true && userBet === 'pari') || (sum === false && userBet === 'dispari')) {
     result2= 'Bravo hai vinto contro il pc';
 } else {
     result2 = 'Peccato hai perso contro il pc';
@@ -64,7 +76,9 @@ if ( (sum === true && userPariOrDispari === 'pari') || (sum === false && userPar
 
 // mi serve per capire bene il debug
 outputHtml.innerHTML += "<br/>Numero dell'utente è " + userNum + " <br/> Il numero del pc è " + pcNum +
-                        "<br/> La loro somma è " + (userNum + pcNum) + "<br/>L'utente ha scommesso su " + userPariOrDispari;
+                        "<br/> La loro somma è " + (userNum + pcNum) + "<br/>L'utente ha scommesso su " + userBet;
+
+
 
 outputHtml.innerHTML += '<br/>' + result2;
 
