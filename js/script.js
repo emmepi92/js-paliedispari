@@ -61,9 +61,15 @@ outputHtml.innerHTML = 'Il nome inserito è '+ userWord + '<br/>' + result + '<b
 
 
 //-------------------------------------------------
+// funzione personalizzata 
 function getRandonFrom1to5 () {
     var num = Math.floor(Math.random() * 5 + 1);
     return num;
+}
+
+//funzione generale
+function gerRandom (min,max) {
+    var num =  Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function isSumPari (num1, num2) {
@@ -76,10 +82,10 @@ function isSumPari (num1, num2) {
     return pari  
 }
 
-var userBet = prompt("Scegli fra pari o dispari, scrivendo 'pari' o 'dispari'");
+var userBet = prompt("Scegli fra pari o dispari, scrivendo 'pari' o 'dispari'").toLocaleLowerCase(); 
 while (userBet !== 'pari' && userBet!=='dispari'){
     alert('Scegli fra pari o dispari');
-    userBet = prompt("Scegli fra pari o dispari, scrivendo 'pari' o 'dispari'");
+    userBet = prompt("Scegli fra pari o dispari, scrivendo 'pari' o 'dispari'").toLocaleLowerCase();
 }
 
 var userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
